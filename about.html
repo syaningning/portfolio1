@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shane's Portfolio - About</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="about">
+        <div class="container">
+            <!-- Navigation Menu -->
+            <nav>
+                <img src="images/logo.jpg.jpg" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="hobby-contact.html">Hobby & Contact</a></li>
+                </ul> 
+            </nav>
+            <!-- End of Navigation Menu -->
+
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.jpg.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hi! I'm Shane Razote, 19 years old. Currently a 2nd year student, studying Bachelor of Science Information System in Kolehiyo ng Lungsod ng Dasmariñas.</p>
+                    
+                    <!-- Tab Structure for Skills, Experience, and Education -->
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Things I do</p>
+                        <p class="tab-links" onclick="opentab('experience')">Awards</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+            <li><span>Read Books</span><br>Loves reading books since I was 7 years old, like "I Wonder Why".</li>
+            <li><span>Playing Online Games</span><br>Plays different mobile games during free time like Call of Duty, Mobile Legends, Roblox, and more.</li>
+            <li><span>Documentation</span><br>Enjoys documenting essays, research, and more.</li>
+          </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+<ul>
+        <li><span>Elementary</span><br>With honors, Early bird, Friendly neighbor</li>
+        <li><span>High School</span><br>With honors, Conduct Awardee</li>
+        <li><span>Senior High</span><br>With honors</li>
+      </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Elementary</span><br>St. Luke - Daet Camarines Norte, Philippines</li>
+                            <li><span>Junior School</span><br>Chung Hua High School- Daet Camarines Norte, Philippines</li>
+                            <li><span>Senior High</span><br>Emilio Aguinaldo College - Dasmariñas Cavite, Philippines</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript to handle tab switching -->
+    <script>
+        var tabLinks = document.getElementsByClassName("tab-links");
+        var tabContents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tabLink of tabLinks){
+                tabLink.classList.remove("active-link");
+            }
+            for(tabContent of tabContents){
+                tabContent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
