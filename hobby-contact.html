@@ -17,7 +17,9 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="hobby-contact.html">Hobby & Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
                 </ul> 
+                <i class="fas fa-bars" onclick="openmenu()"></i>
             </nav>
             <!-- End of Navigation Menu -->
 
@@ -55,5 +57,15 @@
             </div>
         </div>
     </div>
+    <script>
+
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
 </body>
 </html>
