@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shane's Portfolio - Home</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c071efc1b1.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="header">
@@ -16,9 +17,10 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="hobby-contact.html">Hobby & Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
                 </ul> 
-            </nav>
-        
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>    
             <!-- End of Navigation Menu -->
             
             <div class="header-text">
@@ -27,5 +29,15 @@
             </div>
         </div>
     </div>
+    <script>
+
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
 </body>
 </html>
